@@ -18,6 +18,11 @@ RSpec.configure do |config|
 
   ClientApi.configure do |c|
     c.base_url = 'https://pet-aggregator.matic.com'
+    c.logger = { 'Dirname' => './logs', 'Filename' => 'test', 'StoreFilesCount' => 2 }
+
+    c.before(:each) do |scenario|
+      ClientApi::Request.new(scenario)
+    end
   end
 
   def api_init

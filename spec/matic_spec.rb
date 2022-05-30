@@ -21,6 +21,20 @@ RSpec.describe 'API Requests testsuite' do
     puts @api.body
   end
 
+  it 'GET cats with sorted price' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@cat_id}/offers?",
+        query: {
+          'sort_by': 'price'
+        }
+      }
+    )
+    expect(@api.status).to eq(200)
+
+
+  end
+
   it 'GET dogs' do
     @api.get("/pet_requests/#{@dog_id}/offers", nil)
     expect(@api.status).to eq(200)
