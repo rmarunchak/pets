@@ -111,4 +111,83 @@ RSpec.describe 'API Requests testsuite' do
     )
     expect(desc_validation(@api)).to be(true)
   end
+
+  it 'GET cats with price lesser than N' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@cat_id}/offers?",
+        query: {
+          'price_lt': '200'
+        }
+      }
+    )
+    expect(price_lt_validation(@api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+  end
+
+  it 'GET dogs with price lesser than N' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@dog_id}/offers?",
+        query: {
+          'price_lt': '200'
+        }
+      }
+    )
+    expect(price_lt_validation(@api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+  end
+
+  it 'GET all with price lesser than N' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@nil_id}/offers?",
+        query: {
+          'price_lt': '200'
+        }
+      }
+    )
+    expect(price_lt_validation(@api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+  end
+
+  it 'GET cats with price greater than N' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@cat_id}/offers?",
+        query: {
+          'price_gt': '200'
+        }
+      }
+    )
+    expect(price_gt_validation(@api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+  end
+
+
+  it 'GET dogs with price greater than N' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@dog_id}/offers?",
+        query: {
+          'price_gt': '200'
+        }
+      }
+    )
+    expect(price_gt_validation(@api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+  end
+
+  it 'GET all with price greater than N' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@nil_id}/offers?",
+        query: {
+          'price_gt': '200'
+        }
+      }
+    )
+    expect(price_gt_validation(@api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+  end
 end
