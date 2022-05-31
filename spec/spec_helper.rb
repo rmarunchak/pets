@@ -46,4 +46,21 @@ RSpec.configure do |config|
     @api.post('/pet_requests', { "kind": nil })
     @nil_id = @api.body['id']
   end
+
+  def asc_validation(response)
+    prices_array = response.body.flat_map { |response| response['price'] }
+
+    prices_array[0] < prices_array[1]
+
+  end
+
+  def desc_validation(response)
+    prices_array = response.body.flat_map { |response| response['price'] }
+
+    if prices_array[0] > prices_array[1]
+      puts true
+    else
+      puts false
+    end
+  end
 end

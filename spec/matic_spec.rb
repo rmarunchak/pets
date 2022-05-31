@@ -66,9 +66,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-   
-    arr = @api.body.flat_map { |response| response['price'] }
-
+    expect(asc_validation(@api)).to be(true)
   end
 
   it 'GET dogs with sorted price and desc direction' do
@@ -81,6 +79,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
+    desc_validation(@api)
     expect(@api.status).to eq(200)
   end
 
