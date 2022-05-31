@@ -164,7 +164,6 @@ RSpec.describe 'API Requests testsuite' do
     puts 'Warning! Your array is empty' if prices_response(@api).empty?
   end
 
-
   it 'GET dogs with price greater than N' do
     @api.get(
       {
