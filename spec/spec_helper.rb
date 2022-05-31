@@ -49,18 +49,12 @@ RSpec.configure do |config|
 
   def asc_validation(response)
     prices_array = response.body.flat_map { |response| response['price'] }
-
     prices_array[0] < prices_array[1]
 
   end
 
   def desc_validation(response)
     prices_array = response.body.flat_map { |response| response['price'] }
-
-    if prices_array[0] > prices_array[1]
-      puts true
-    else
-      puts false
-    end
+    prices_array[0] > prices_array[1]
   end
 end

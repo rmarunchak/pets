@@ -9,7 +9,6 @@ RSpec.describe 'API Requests testsuite' do
   end
 
   after(:each) do
-    puts @api.headers
     puts @api.body
   end
 
@@ -35,7 +34,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    expect(@api.status).to eq(200)
+    expect(asc_validation(@api)).to be(true)
   end
 
   it 'GET cats with sorted price and desc direction' do
@@ -48,7 +47,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    expect(@api.status).to eq(200)
+    expect(desc_validation(@api)).to be(true)
   end
 
   it 'GET dogs' do
@@ -79,8 +78,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    desc_validation(@api)
-    expect(@api.status).to eq(200)
+    expect(desc_validation(@api)).to be(true)
   end
 
   it 'GET all' do
@@ -91,13 +89,26 @@ RSpec.describe 'API Requests testsuite' do
   it 'GET all with sorted price and asc direction' do
     @api.get(
       {
-        url: "/pet_requests/#{@dog_id}/offers?",
+        url: "/pet_requests/#{@nil_id}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'asc'
         }
       }
     )
-    expect(@api.status).to eq(200)
+    expect(asc_validation(@api)).to be(true)
+  end
+
+  it 'GET all with sorted price and desc direction' do
+    @api.get(
+      {
+        url: "/pet_requests/#{@nil_id}/offers?",
+        query: {
+          'sort_by': 'price',
+          'direction': 'desc'
+        }
+      }
+    )
+    expect(desc_validation(@api)).to be(true)
   end
 end
