@@ -19,6 +19,8 @@ RSpec.describe 'API Requests testsuite' do
     @api.body['id']
   end
 
+  let(:warning_message) { 'Test failed because of wrong direction' }
+
   before do
     @new_api = ClientApi::Api.new
   end
@@ -49,7 +51,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    expect(asc_validation(@new_api)).to be(true)
+    expect(asc_validation(@new_api)).to be(true), warning_message
   end
 
   it 'GET cats with sorted price and desc direction' do
@@ -62,8 +64,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    puts 'Wrong order' unless desc_validation(@new_api)
-    expect(desc_validation(@new_api)).to be(true)
+    expect(desc_validation(@new_api)).to be(true), warning_message
   end
 
   it 'GET dogs' do
@@ -81,8 +82,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    puts 'Wrong order' unless asc_validation(@new_api)
-    expect(asc_validation(@new_api)).to be(true)
+    expect(asc_validation(@new_api)).to be(true), warning_message
   end
 
   it 'GET dogs with sorted price and desc direction' do
@@ -95,8 +95,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    puts 'Wrong order' unless desc_validation(@new_api)
-    expect(desc_validation(@new_api)).to be(true)
+    expect(desc_validation(@new_api)).to be(true), warning_message
   end
 
   it 'GET all' do
@@ -114,8 +113,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    puts 'Wrong order' unless asc_validation(@new_api)
-    expect(asc_validation(@new_api)).to be(true)
+    expect(asc_validation(@new_api)).to be(true), warning_message
   end
 
   it 'GET all with sorted price and desc direction' do
@@ -128,8 +126,7 @@ RSpec.describe 'API Requests testsuite' do
         }
       }
     )
-    puts 'Wrong order' unless desc_validation(@new_api)
-    expect(desc_validation(@new_api)).to be(true)
+    expect(desc_validation(@new_api)).to be(true), warning_message
   end
 
   it 'GET cats with price lesser than N' do

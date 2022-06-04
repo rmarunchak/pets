@@ -7,9 +7,9 @@ gemspec
 
 gem 'allure-rspec'
 gem 'client-api'
+gem 'coderay'
 gem 'json'
 gem 'rake', '~> 12.0'
 gem 'rspec', '~> 3.0'
 gem 'rubocop'
 gem 'rubocop-rspec'
-gem 'coderay'

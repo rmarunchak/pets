@@ -27,7 +27,7 @@ RSpec.configure do |config|
     end
 
     AllureRspec.configure do |config|
-      config.results_directory = "report/allure-results"
+      config.results_directory = 'report/allure-results'
       config.logging_level = Logger::INFO
       config.logger = Logger.new($stdout, Logger::DEBUG)
     end
