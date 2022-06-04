@@ -1,0 +1,264 @@
+D, [2022-06-04T23:06:14.531815 #63715] DEBUG -- : Requested scenario == 'valid POST request'
+D, [2022-06-04T23:06:14.532000 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:14.532009 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:14.532014 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:14.532018 #63715] DEBUG -- : Requested body == {:kind=>"cat"}
+D, [2022-06-04T23:06:15.334564 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:15.335124 #63715] DEBUG -- : Response body == {"id"=>"c9ee3d64-e441-11ec-ae01-6f4bc0d998c7", "kind"=>"cat"}
+D, [2022-06-04T23:06:15.335195 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:14 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:15.335208 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:15.339589 #63715] DEBUG -- : Requested scenario == 'GET cats'
+D, [2022-06-04T23:06:15.339840 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:15.339860 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:15.339868 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:15.339880 #63715] DEBUG -- : Requested body == {:kind=>"cat"}
+D, [2022-06-04T23:06:15.715990 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:15.716125 #63715] DEBUG -- : Response body == {"id"=>"ca28909a-e441-11ec-ae01-7b0885778b72", "kind"=>"cat"}
+D, [2022-06-04T23:06:15.716204 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:14 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:15.716217 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:15.716721 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:15.716754 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/ca28909a-e441-11ec-ae01-7b0885778b72/offers
+D, [2022-06-04T23:06:15.716766 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:15.716792 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:20.189374 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:20.189472 #63715] DEBUG -- : Response body == [{"id"=>"ca631e86-e441-11ec-ae01-3f60a46901f3", "breed"=>"Dwelf", "price"=>"500.0"}, {"id"=>"ca641f52-e441-11ec-ae01-7b28dccf5ce7", "breed"=>"Bombay", "price"=>"193.0"}, {"id"=>"ca64f86e-e441-11ec-ae01-3b3b509525ab", "breed"=>"Abyssinian", "price"=>"241.0"}]
+D, [2022-06-04T23:06:20.189503 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:19 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"241", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:20.189511 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:20.190472 #63715] DEBUG -- : Requested scenario == 'GET cats with sorted price and asc direction'
+D, [2022-06-04T23:06:20.190678 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:20.190695 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:20.190701 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:20.190711 #63715] DEBUG -- : Requested body == {:kind=>"cat"}
+D, [2022-06-04T23:06:20.568359 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:20.568523 #63715] DEBUG -- : Response body == {"id"=>"cd0cc7cc-e441-11ec-ae01-ff50039dfedb", "kind"=>"dog"}
+D, [2022-06-04T23:06:20.568580 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:20 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:20.568600 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:20.569215 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:20.569506 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/cd0cc7cc-e441-11ec-ae01-ff50039dfedb/offers?sort_by=price&direction=asc
+D, [2022-06-04T23:06:20.569524 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:20.569539 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:24.992046 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:24.992110 #63715] DEBUG -- : Response body == [{"id"=>"cd485b2a-e441-11ec-ae01-373eba9c38d6", "breed"=>"Soft Coated Wheaten Terriers", "price"=>"305.0"}, {"id"=>"cd477c14-e441-11ec-ae01-af3d775aa703", "breed"=>"Scottish Terriers", "price"=>"307.0"}, {"id"=>"cd493d56-e441-11ec-ae01-3bcd912b409f", "breed"=>"Bullmastiffs", "price"=>"318.0"}]
+D, [2022-06-04T23:06:24.992137 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:24 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"277", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:24.992145 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:24.994560 #63715] DEBUG -- : Requested scenario == 'GET cats with sorted price and desc direction'
+D, [2022-06-04T23:06:24.994822 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:24.994842 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:24.994850 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:24.994862 #63715] DEBUG -- : Requested body == {:kind=>"cat"}
+D, [2022-06-04T23:06:25.416200 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:25.416355 #63715] DEBUG -- : Response body == {"id"=>"cff0911c-e441-11ec-a2ed-57f7fce96354", "kind"=>"cat"}
+D, [2022-06-04T23:06:25.416411 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:25 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:25.416435 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:25.417417 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:25.417470 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/cff0911c-e441-11ec-a2ed-57f7fce96354/offers?sort_by=price&direction=desc
+D, [2022-06-04T23:06:25.417611 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:25.417629 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:26.836440 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:26.836642 #63715] DEBUG -- : Response body == [{"id"=>"d02b6e36-e441-11ec-ae01-67d991028375", "breed"=>"Ukrainian Levkoy", "price"=>"394.0"}, {"id"=>"d02e55a6-e441-11ec-ae01-83c467fbcedf", "breed"=>"German Rex", "price"=>"322.0"}, {"id"=>"d02c62a0-e441-11ec-ae01-cb45d85c9379", "breed"=>"Aegean", "price"=>"234.0"}, {"id"=>"d02d53e0-e441-11ec-ae01-0f4cea3ebf8b", "breed"=>"Mekong Bobtail", "price"=>"-135.0"}]
+D, [2022-06-04T23:06:26.836773 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:26 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"340", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:26.836793 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:26.839295 #63715] DEBUG -- : Requested scenario == 'GET dogs'
+D, [2022-06-04T23:06:26.839583 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:26.839607 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:26.839767 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:26.839787 #63715] DEBUG -- : Requested body == {:kind=>"dog"}
+D, [2022-06-04T23:06:27.217013 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:27.217245 #63715] DEBUG -- : Response body == {"id"=>"d10360de-e441-11ec-a2ed-2fc0a15602c9", "kind"=>"cat"}
+D, [2022-06-04T23:06:27.217305 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:27 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:27.217325 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:27.217983 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:27.218056 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/d10360de-e441-11ec-a2ed-2fc0a15602c9/offers
+D, [2022-06-04T23:06:27.218067 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:27.218074 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:32.673607 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:32.673844 #63715] DEBUG -- : Response body == [{"id"=>"d13e6c1a-e441-11ec-a2ed-e78b11aa07d6", "breed"=>"Devon Rex", "price"=>"141.0"}, {"id"=>"d13f6db8-e441-11ec-a2ed-8fe55344d196", "breed"=>"Singapura", "price"=>"392.0"}, {"id"=>"d14056b0-e441-11ec-a2ed-f321d9776c83", "breed"=>"Chantilly-Tiffany", "price"=>"318.0"}, {"id"=>"d1415524-e441-11ec-a2ed-2b18815e49c8", "breed"=>"Himalayan", "price"=>"232.0"}, {"id"=>"d1424d8a-e441-11ec-a2ed-5f0ad2671b03", "breed"=>"Birman", "price"=>"-227.0"}]
+D, [2022-06-04T23:06:32.673902 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:32 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"417", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:32.673919 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:32.676638 #63715] DEBUG -- : Requested scenario == 'GET dogs with sorted price and asc direction'
+D, [2022-06-04T23:06:32.676877 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:32.676901 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:32.676910 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:32.676923 #63715] DEBUG -- : Requested body == {:kind=>"dog"}
+D, [2022-06-04T23:06:33.108018 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:33.108181 #63715] DEBUG -- : Response body == {"id"=>"d4861968-e441-11ec-a2ed-5fa21548f608", "kind"=>"dog"}
+D, [2022-06-04T23:06:33.108294 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:32 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:33.108308 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:33.108945 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:33.108978 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/d4861968-e441-11ec-a2ed-5fa21548f608/offers?sort_by=price&direction=asc
+D, [2022-06-04T23:06:33.108992 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:33.109001 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:34.590155 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:34.590450 #63715] DEBUG -- : Response body == [{"id"=>"d4c1e880-e441-11ec-a2ed-4323908dce6b", "breed"=>"Dalmatians", "price"=>"149.0"}, {"id"=>"d4c3986a-e441-11ec-a2ed-ff80685e5f61", "breed"=>"Bloodhounds", "price"=>"299.0"}, {"id"=>"d4c2bd50-e441-11ec-a2ed-1b7762a92618", "breed"=>"Chihuahuas", "price"=>"397.0"}, {"id"=>"d4c46fd8-e441-11ec-a2ed-6b62b3736fe9", "breed"=>"Retrievers (Golden)", "price"=>"402.0"}, {"id"=>"d4c0fc7c-e441-11ec-a2ed-93b534b3d41a", "breed"=>"Italian Greyhounds", "price"=>"452.0"}]
+D, [2022-06-04T23:06:34.590515 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:33 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"434", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:34.590533 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:34.593279 #63715] DEBUG -- : Requested scenario == 'GET dogs with sorted price and desc direction'
+D, [2022-06-04T23:06:34.593737 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:34.593768 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:34.593777 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:34.593793 #63715] DEBUG -- : Requested body == {:kind=>"dog"}
+D, [2022-06-04T23:06:34.972763 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:34.972941 #63715] DEBUG -- : Response body == {"id"=>"d5a2fbea-e441-11ec-a2ed-8b38353dec8a", "kind"=>"dog"}
+D, [2022-06-04T23:06:34.972978 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:34 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:34.972989 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:34.973551 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:34.973582 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/d5a2fbea-e441-11ec-a2ed-8b38353dec8a/offers?sort_by=price&direction=desc
+D, [2022-06-04T23:06:34.973591 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:34.973600 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:36.386076 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:36.386336 #63715] DEBUG -- : Response body == [{"id"=>"d5e08000-e441-11ec-a2ed-ab8a34447304", "breed"=>"Soft Coated Wheaten Terriers", "price"=>"479.0"}, {"id"=>"d5de9592-e441-11ec-a2ed-3f7f4b0f3e8a", "breed"=>"Spaniels (Cocker)", "price"=>"343.0"}, {"id"=>"d5dda196-e441-11ec-a2ed-5b925afe1f80", "breed"=>"French Bulldogs", "price"=>"341.0"}, {"id"=>"d5e16632-e441-11ec-a2ed-37fce0a3930b", "breed"=>"Pomeranians", "price"=>"273.0"}, {"id"=>"d5df9424-e441-11ec-a2ed-1b31feea6ad1", "breed"=>"Pomeranians", "price"=>"-187.0"}]
+D, [2022-06-04T23:06:36.386443 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:35 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"449", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:36.386461 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:36.389196 #63715] DEBUG -- : Requested scenario == 'GET all'
+D, [2022-06-04T23:06:36.389730 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:36.389764 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:36.389774 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:36.389793 #63715] DEBUG -- : Requested body == {:kind=>nil}
+D, [2022-06-04T23:06:36.769275 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:36.769494 #63715] DEBUG -- : Response body == {"id"=>"d6b4f33a-e441-11ec-a2ed-a7a2ffa42e1a", "kind"=>nil}
+D, [2022-06-04T23:06:36.769564 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:36 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"57", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:36.769588 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:36.770204 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:36.770513 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/d6b4f33a-e441-11ec-a2ed-a7a2ffa42e1a/offers
+D, [2022-06-04T23:06:36.770529 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:36.770539 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:52.231537 #63715] DEBUG -- : Response code == 408
+D, [2022-06-04T23:06:52.231675 #63715] DEBUG -- : Response body == empty response body
+D, [2022-06-04T23:06:52.231824 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:51 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"0", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:52.231849 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:52.286896 #63715] DEBUG -- : Requested scenario == 'GET all with sorted price and asc direction'
+D, [2022-06-04T23:06:52.287012 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:52.287021 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:52.287024 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:52.287029 #63715] DEBUG -- : Requested body == {:kind=>nil}
+D, [2022-06-04T23:06:52.711242 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:52.711488 #63715] DEBUG -- : Response body == {"id"=>"e034b800-e441-11ec-a2ed-5772cb19c592", "kind"=>nil}
+D, [2022-06-04T23:06:52.711558 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:52 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"57", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:52.711582 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:52.712452 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:52.712502 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/e034b800-e441-11ec-a2ed-5772cb19c592/offers?sort_by=price&direction=asc
+D, [2022-06-04T23:06:52.712521 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:52.712537 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:06:55.479675 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:06:55.479884 #63715] DEBUG -- : Response body == [{"id"=>"e0aa4b2e-e441-11ec-a2ed-d74418bee538", "breed"=>"American Bobtail", "price"=>"103.0"}, {"id"=>"e0a66694-e441-11ec-a2ed-9be462eb4939", "breed"=>"Bernese Mountain Dogs", "price"=>"217.0"}, {"id"=>"e0a5761c-e441-11ec-a2ed-5795f654fca8", "breed"=>"Akitas", "price"=>"249.0"}, {"id"=>"e0a75c52-e441-11ec-a2ed-fb4d15ddb05d", "breed"=>"Turkish Vankedisi", "price"=>"264.0"}, {"id"=>"e0a3c2f4-e441-11ec-a2ed-87bb21b93cab", "breed"=>"Pembroke Welsh Corgis", "price"=>"343.0"}, {"id"=>"e0a955d4-e441-11ec-a2ed-7b05418670e3", "breed"=>"Napoleon", "price"=>"373.0"}, {"id"=>"e0a2d826-e441-11ec-a2ed-077042fad2a8", "breed"=>"Pointers (German Shorthaired)", "price"=>"411.0"}, {"id"=>"e0a4997c-e441-11ec-a2ed-7fdef3d605e7", "breed"=>"Australian Cattle Dogs", "price"=>"463.0"}, {"id"=>"e0a8535a-e441-11ec-a2ed-cf1f55e5cf8e", "breed"=>"Asian", "price"=>"471.0"}]
+D, [2022-06-04T23:06:55.480067 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:55 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"803", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:55.480113 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:55.481672 #63715] DEBUG -- : Requested scenario == 'GET all with sorted price and desc direction'
+D, [2022-06-04T23:06:55.481951 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:06:55.481972 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:06:55.481980 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:55.481992 #63715] DEBUG -- : Requested body == {:kind=>nil}
+D, [2022-06-04T23:06:55.855006 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:06:55.855192 #63715] DEBUG -- : Response body == {"id"=>"e215982e-e441-11ec-ae01-f3d79069e211", "kind"=>nil}
+D, [2022-06-04T23:06:55.855267 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:06:55 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"57", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:06:55.855304 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:06:55.856049 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:06:55.856084 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/e215982e-e441-11ec-ae01-f3d79069e211/offers?sort_by=price&direction=desc
+D, [2022-06-04T23:06:55.856097 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:06:55.856174 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:11.284230 #63715] DEBUG -- : Response code == 408
+D, [2022-06-04T23:07:11.284435 #63715] DEBUG -- : Response body == empty response body
+D, [2022-06-04T23:07:11.284563 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:11 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"0", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:11.284588 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:11.296952 #63715] DEBUG -- : Requested scenario == 'GET cats with price lesser than N'
+D, [2022-06-04T23:07:11.297225 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:07:11.297244 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:07:11.297255 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:11.297266 #63715] DEBUG -- : Requested body == {:kind=>"cat"}
+D, [2022-06-04T23:07:11.748741 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:07:11.748931 #63715] DEBUG -- : Response body == {"id"=>"eb8e5c38-e441-11ec-a2ed-6b11862c877e", "kind"=>"cat"}
+D, [2022-06-04T23:07:11.749029 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:10 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:11.749189 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:11.750147 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:07:11.750204 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/eb8e5c38-e441-11ec-a2ed-6b11862c877e/offers?price_lt=200
+D, [2022-06-04T23:07:11.750228 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:11.750319 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:15.169773 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:07:15.169933 #63715] DEBUG -- : Response body == [{"id"=>"ebc9f478-e441-11ec-ae01-cf52b1caf0db", "breed"=>"Highlander", "price"=>"123.0"}]
+D, [2022-06-04T23:07:15.169996 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:15 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"84", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:15.170014 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:15.172278 #63715] DEBUG -- : Requested scenario == 'GET dogs with price lesser than N'
+D, [2022-06-04T23:07:15.172833 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:07:15.172889 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:07:15.174114 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:15.174147 #63715] DEBUG -- : Requested body == {:kind=>"dog"}
+D, [2022-06-04T23:07:15.556871 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:07:15.557012 #63715] DEBUG -- : Response body == {"id"=>"edd39ed6-e441-11ec-a2ed-efab3904e0d6", "kind"=>"cat"}
+D, [2022-06-04T23:07:15.557049 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:14 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:15.557063 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:15.557613 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:07:15.557653 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/edd39ed6-e441-11ec-a2ed-efab3904e0d6/offers?price_lt=200
+D, [2022-06-04T23:07:15.557663 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:15.557670 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:20.084104 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:07:20.084305 #63715] DEBUG -- : Response body == [{"id"=>"ee10e444-e441-11ec-a2ed-473d7d90e938", "breed"=>"Siamese", "price"=>"134.0"}]
+D, [2022-06-04T23:07:20.084387 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:19 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"81", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:20.084406 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:20.087012 #63715] DEBUG -- : Requested scenario == 'GET all with price lesser than N'
+D, [2022-06-04T23:07:20.087583 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:07:20.087639 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:07:20.087650 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:20.087666 #63715] DEBUG -- : Requested body == {:kind=>nil}
+D, [2022-06-04T23:07:20.473866 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:07:20.474045 #63715] DEBUG -- : Response body == {"id"=>"f0c1a890-e441-11ec-ae01-874a0f82360f", "kind"=>nil}
+D, [2022-06-04T23:07:20.474312 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:20 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"57", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:20.474342 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:20.475134 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:07:20.475185 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/f0c1a890-e441-11ec-ae01-874a0f82360f/offers?price_lt=200
+D, [2022-06-04T23:07:20.475207 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:20.475223 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:23.976016 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:07:23.976409 #63715] DEBUG -- : Response body == [{"id"=>"f0fdfcdc-e441-11ec-ae01-1785b19db8ee", "breed"=>"Boston Terriers", "price"=>"-179.0"}, {"id"=>"f0fed300-e441-11ec-ae01-c7259bdbf09b", "breed"=>"Selkirk Rex", "price"=>"197.0"}, {"id"=>"f0ffac80-e441-11ec-ae01-4b16513049be", "breed"=>"Snowshoe", "price"=>"-102.0"}]
+D, [2022-06-04T23:07:23.976453 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:23 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"256", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:23.976464 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:23.978540 #63715] DEBUG -- : Requested scenario == 'GET cats with price greater than N'
+D, [2022-06-04T23:07:23.978868 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:07:23.978896 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:07:23.978904 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:23.978917 #63715] DEBUG -- : Requested body == {:kind=>"cat"}
+D, [2022-06-04T23:07:24.353993 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:07:24.354163 #63715] DEBUG -- : Response body == {"id"=>"f311ff46-e441-11ec-ae01-ff69603c6539", "kind"=>"dog"}
+D, [2022-06-04T23:07:24.354210 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:24 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:24.354226 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:24.355517 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:07:24.355559 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/f311ff46-e441-11ec-ae01-ff69603c6539/offers?price_gt=200
+D, [2022-06-04T23:07:24.355575 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:24.355588 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:25.763597 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:07:25.763771 #63715] DEBUG -- : Response body == [{"id"=>"f34cf7ae-e441-11ec-a2ed-eb5d9250b9a7", "breed"=>"Dachshunds", "price"=>"371.0"}]
+D, [2022-06-04T23:07:25.763834 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:25 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"84", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:25.763855 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:25.766860 #63715] DEBUG -- : Requested scenario == 'GET dogs with price greater than N'
+D, [2022-06-04T23:07:25.767382 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:07:25.767419 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:07:25.767430 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:25.767450 #63715] DEBUG -- : Requested body == {:kind=>"dog"}
+D, [2022-06-04T23:07:26.149996 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:07:26.150145 #63715] DEBUG -- : Response body == {"id"=>"f4243d04-e441-11ec-a2ed-13409bd1de51", "kind"=>"dog"}
+D, [2022-06-04T23:07:26.150207 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:25 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"58", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:26.150224 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:26.150803 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:07:26.150839 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/f4243d04-e441-11ec-a2ed-13409bd1de51/offers?price_gt=200
+D, [2022-06-04T23:07:26.150854 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:26.150869 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:31.656168 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:07:31.656330 #63715] DEBUG -- : Response body == [{"id"=>"f4602ba2-e441-11ec-a2ed-63e0685d8e9c", "breed"=>"Cardigan Welsh Corgis", "price"=>"457.0"}, {"id"=>"f462d280-e441-11ec-a2ed-278ff45b91cd", "breed"=>"Bernese Mountain Dogs", "price"=>"482.0"}, {"id"=>"f463bc86-e441-11ec-a2ed-7f8ba1500006", "breed"=>"Papillons", "price"=>"345.0"}]
+D, [2022-06-04T23:07:31.656392 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:31 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"271", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:31.658205 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:31.660025 #63715] DEBUG -- : Requested scenario == 'GET all with price greater than N'
+D, [2022-06-04T23:07:31.660287 #63715] DEBUG -- : Requested method == POST
+D, [2022-06-04T23:07:31.660311 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests
+D, [2022-06-04T23:07:31.660319 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:31.660331 #63715] DEBUG -- : Requested body == {:kind=>nil}
+D, [2022-06-04T23:07:32.037657 #63715] DEBUG -- : Response code == 201
+D, [2022-06-04T23:07:32.037732 #63715] DEBUG -- : Response body == {"id"=>"f7a5e342-e441-11ec-ae01-9f5f03129d5b", "kind"=>nil}
+D, [2022-06-04T23:07:32.037771 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:31 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"57", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:32.037780 #63715] DEBUG -- : =====================================================================================
+D, [2022-06-04T23:07:32.040018 #63715] DEBUG -- : Requested method == GET
+D, [2022-06-04T23:07:32.040045 #63715] DEBUG -- : Requested url == https://pet-aggregator.matic.com/pet_requests/f7a5e342-e441-11ec-ae01-9f5f03129d5b/offers?price_gt=200
+D, [2022-06-04T23:07:32.040054 #63715] DEBUG -- : Requested headers == {}
+D, [2022-06-04T23:07:32.040061 #63715] DEBUG -- : Requested body == not available
+D, [2022-06-04T23:07:34.622334 #63715] DEBUG -- : Response code == 200
+D, [2022-06-04T23:07:34.622445 #63715] DEBUG -- : Response body == [{"id"=>"f7e8bf5a-e441-11ec-a2ed-273f1251d887", "breed"=>"Samoyeds", "price"=>"448.0"}, {"id"=>"f7ec836a-e441-11ec-a2ed-5ff80f37d57b", "breed"=>"Nebelung", "price"=>"280.0"}, {"id"=>"f7ed72e8-e441-11ec-a2ed-2b8b09ef4c17", "breed"=>"Munchkin", "price"=>"482.0"}, {"id"=>"f7ee63c4-e441-11ec-a2ed-93524fcabaf8", "breed"=>"Munchkin", "price"=>"389.0"}, {"id"=>"f7ef42b2-e441-11ec-a2ed-7f5cb9f15502", "breed"=>"Siberian", "price"=>"439.0"}]
+D, [2022-06-04T23:07:34.622482 #63715] DEBUG -- : Response headers == {"server"=>"Cowboy", "date"=>"Sat, 04 Jun 2022 20:07:34 GMT", "connection"=>"close", "content-type"=>"application/json", "x-content-type-options"=>"nosniff", "content-length"=>"406", "via"=>"1.1 vegur"}
+D, [2022-06-04T23:07:34.622491 #63715] DEBUG -- : =====================================================================================

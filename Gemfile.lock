@@ -1,0 +1,91 @@
+PATH
+  remote: .
+  specs:
+    matic (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    allure-rspec (2.18.0)
+      allure-ruby-commons (= 2.18.0)
+      rspec-core (>= 3.8, < 4)
+    allure-ruby-commons (2.18.0)
+      mime-types (>= 3.3, < 4)
+      oj (>= 3.10, < 4)
+      require_all (>= 2, < 4)
+      uuid (>= 2.3, < 3)
+    ast (2.4.2)
+    client-api (0.4.1)
+      json-schema (~> 2.8)
+      logger (~> 1.0)
+    coderay (1.1.3)
+    diff-lcs (1.5.0)
+    json (2.3.0)
+    json-schema (2.8.1)
+      addressable (>= 2.4)
+    logger (1.5.1)
+    macaddr (1.7.2)
+      systemu (~> 2.6.5)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2022.0105)
+    oj (3.13.14)
+    parallel (1.22.1)
+    parser (3.1.2.0)
+      ast (~> 2.4.1)
+    public_suffix (4.0.7)
+    rainbow (3.1.1)
+    rake (12.3.3)
+    regexp_parser (2.4.0)
+    require_all (3.0.0)
+    rexml (3.2.5)
+    rspec (3.11.0)
+      rspec-core (~> 3.11.0)
+      rspec-expectations (~> 3.11.0)
+      rspec-mocks (~> 3.11.0)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-support (3.11.0)
+    rubocop (1.30.0)
+      parallel (~> 1.10)
+      parser (>= 3.1.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.18.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.18.0)
+      parser (>= 3.1.1.0)
+    rubocop-rspec (2.11.1)
+      rubocop (~> 1.19)
+    ruby-progressbar (1.11.0)
+    systemu (2.6.5)
+    unicode-display_width (2.1.0)
+    uuid (2.3.9)
+      macaddr (~> 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  allure-rspec
+  client-api
+  coderay
+  json
+  matic!
+  rake (~> 12.0)
+  rspec (~> 3.0)
+  rubocop
+  rubocop-rspec
+
+BUNDLED WITH
+   2.1.4
