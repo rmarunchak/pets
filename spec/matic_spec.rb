@@ -1,192 +1,212 @@
 # frozen_string_literal: true
 
 RSpec.describe 'API Requests testsuite' do
-  before(:each) do
+  let(:cat) do
     @api = ClientApi::Api.new
-    cat_id
-    dog_id
-    nil_id
+    @api.post('/pet_requests', { "kind": 'cat' })
+    @api.body['id']
   end
 
-  after(:each) do
-    puts @api.body
+  let(:dog) do
+    @api = ClientApi::Api.new
+    @api.post('/pet_requests', { "kind": 'dog' })
+    @api.body['id']
+  end
+
+  let(:all) do
+    @api = ClientApi::Api.new
+    @api.post('/pet_requests', { "kind": nil })
+    @api.body['id']
+  end
+
+  before do
+    @new_api = ClientApi::Api.new
+  end
+
+  after do
+    puts @new_api.body
   end
 
   it 'valid POST request' do
     value = %w[cat dog].sample
-    @api.post('/pet_requests', { "kind": value })
-    expect(@api.status).to eq(201)
-    expect(@api.body['kind']).to eql value
+    @new_api.post('/pet_requests', { "kind": value })
+    expect(@new_api.status).to eq(201)
+    expect(@new_api.body['kind']).to eql value
   end
 
   it 'GET cats' do
-    @api.get("/pet_requests/#{@cat_id}/offers", nil)
-    expect(@api.status).to eq(200)
+    @new_api.get("/pet_requests/#{cat}/offers", nil)
+    expect(@new_api.status).to eq(200)
   end
 
   it 'GET cats with sorted price and asc direction' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@cat_id}/offers?",
+        url: "/pet_requests/#{cat}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'asc'
         }
       }
     )
-    expect(asc_validation(@api)).to be(true)
+    expect(asc_validation(@new_api)).to be(true)
   end
 
   it 'GET cats with sorted price and desc direction' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@dog_id}/offers?",
+        url: "/pet_requests/#{cat}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'desc'
         }
       }
     )
-    expect(desc_validation(@api)).to be(true)
+    puts 'Wrong order' unless desc_validation(@new_api)
+    expect(desc_validation(@new_api)).to be(true)
   end
 
   it 'GET dogs' do
-    @api.get("/pet_requests/#{@dog_id}/offers", nil)
-    expect(@api.status).to eq(200)
+    @new_api.get("/pet_requests/#{dog}/offers", nil)
+    expect(@new_api.status).to eq(200)
   end
 
   it 'GET dogs with sorted price and asc direction' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@dog_id}/offers?",
+        url: "/pet_requests/#{dog}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'asc'
         }
       }
     )
-    expect(asc_validation(@api)).to be(true)
+    puts 'Wrong order' unless asc_validation(@new_api)
+    expect(asc_validation(@new_api)).to be(true)
   end
 
   it 'GET dogs with sorted price and desc direction' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@dog_id}/offers?",
+        url: "/pet_requests/#{dog}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'desc'
         }
       }
     )
-    expect(desc_validation(@api)).to be(true)
+    puts 'Wrong order' unless desc_validation(@new_api)
+    expect(desc_validation(@new_api)).to be(true)
   end
 
   it 'GET all' do
-    @api.get("/pet_requests/#{@nil_id}/offers", nil)
-    expect(@api.status).to eq(200)
+    @new_api.get("/pet_requests/#{all}/offers", nil)
+    expect(@new_api.status).to eq(200)
   end
 
   it 'GET all with sorted price and asc direction' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@nil_id}/offers?",
+        url: "/pet_requests/#{all}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'asc'
         }
       }
     )
-    expect(asc_validation(@api)).to be(true)
+    puts 'Wrong order' unless asc_validation(@new_api)
+    expect(asc_validation(@new_api)).to be(true)
   end
 
   it 'GET all with sorted price and desc direction' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@nil_id}/offers?",
+        url: "/pet_requests/#{all}/offers?",
         query: {
           'sort_by': 'price',
           'direction': 'desc'
         }
       }
     )
-    expect(desc_validation(@api)).to be(true)
+    puts 'Wrong order' unless desc_validation(@new_api)
+    expect(desc_validation(@new_api)).to be(true)
   end
 
   it 'GET cats with price lesser than N' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@cat_id}/offers?",
+        url: "/pet_requests/#{cat}/offers?",
         query: {
           'price_lt': '200'
         }
       }
     )
-    expect(price_lt_validation(@api, 200.to_s)).to be(true)
-    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+    expect(price_lt_validation(@new_api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@new_api).empty?
   end
 
   it 'GET dogs with price lesser than N' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@dog_id}/offers?",
+        url: "/pet_requests/#{dog}/offers?",
         query: {
           'price_lt': '200'
         }
       }
     )
-    expect(price_lt_validation(@api, 200.to_s)).to be(true)
-    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+    expect(price_lt_validation(@new_api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@new_api).empty?
   end
 
   it 'GET all with price lesser than N' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@nil_id}/offers?",
+        url: "/pet_requests/#{all}/offers?",
         query: {
           'price_lt': '200'
         }
       }
     )
-    expect(price_lt_validation(@api, 200.to_s)).to be(true)
-    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+    expect(price_lt_validation(@new_api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@new_api).empty?
   end
 
   it 'GET cats with price greater than N' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@cat_id}/offers?",
+        url: "/pet_requests/#{cat}/offers?",
         query: {
           'price_gt': '200'
         }
       }
     )
-    expect(price_gt_validation(@api, 200.to_s)).to be(true)
-    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+    expect(price_gt_validation(@new_api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@new_api).empty?
   end
 
   it 'GET dogs with price greater than N' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@dog_id}/offers?",
+        url: "/pet_requests/#{dog}/offers?",
         query: {
           'price_gt': '200'
         }
       }
     )
-    expect(price_gt_validation(@api, 200.to_s)).to be(true)
-    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+    expect(price_gt_validation(@new_api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@new_api).empty?
   end
 
   it 'GET all with price greater than N' do
-    @api.get(
+    @new_api.get(
       {
-        url: "/pet_requests/#{@nil_id}/offers?",
+        url: "/pet_requests/#{all}/offers?",
         query: {
           'price_gt': '200'
         }
       }
     )
-    expect(price_gt_validation(@api, 200.to_s)).to be(true)
-    puts 'Warning! Your array is empty' if prices_response(@api).empty?
+    expect(price_gt_validation(@new_api, 200.to_s)).to be(true)
+    puts 'Warning! Your array is empty' if prices_response(@new_api).empty?
   end
 end

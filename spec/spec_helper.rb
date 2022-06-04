@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
+require 'allure-rspec'
 require 'bundler/setup'
 require 'matic'
 require 'client-api'
 require 'json'
+require 'validation_methods'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -20,54 +22,14 @@ RSpec.configure do |config|
     c.base_url = 'https://pet-aggregator.matic.com'
     c.logger = { 'Dirname' => './logs', 'Filename' => 'test', 'StoreFilesCount' => 2 }
 
-    c.before(:each) do |scenario|
+    c.before do |scenario|
       ClientApi::Request.new(scenario)
     end
-  end
 
-  def api_init
-    @api = ClientApi::Api.new
-  end
-
-  def cat_id
-    api_init
-    @api.post('/pet_requests', { "kind": 'cat' })
-    @cat_id = @api.body['id']
-  end
-
-  def dog_id
-    api_init
-    @api.post('/pet_requests', { "kind": 'dog' })
-    @dog_id = @api.body['id']
-  end
-
-  def nil_id
-    api_init
-    @api.post('/pet_requests', { "kind": nil })
-    @nil_id = @api.body['id']
-  end
-
-  def asc_validation(response)
-    prices_array = response.body.flat_map { |response| response['price'] }
-    prices_array[0] < prices_array[1]
-  end
-
-  def prices_response(response)
-    @prices_array = response.body.flat_map { |response| response['price'] }
-  end
-
-  def desc_validation(response)
-    prices_array = response.body.flat_map { |response| response['price'] }
-    prices_array[0] > prices_array[1]
-  end
-
-  def price_lt_validation(response, num)
-    prices_array = response.body.flat_map { |response| response['price'] }
-    prices_array.all? { |elem| elem < num }
-  end
-
-  def price_gt_validation(response, num)
-    prices_array = response.body.flat_map { |response| response['price'] }
-    prices_array.all? { |elem| elem > num }
+    AllureRspec.configure do |config|
+      config.results_directory = "report/allure-results"
+      config.logging_level = Logger::INFO
+      config.logger = Logger.new($stdout, Logger::DEBUG)
+    end
   end
 end
