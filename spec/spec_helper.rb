@@ -20,7 +20,7 @@ RSpec.configure do |config|
 
   ClientApi.configure do |c|
     c.base_url = 'https://pet-aggregator.matic.com'
-    c.logger = { 'Dirname' => './logs', 'Filename' => 'test', 'StoreFilesCount' => 2 }
+    c.logger = { 'Dirname' => './logs', 'Filename' => 'test', 'StoreFilesCount' => 20 }
 
     c.before do |scenario|
       ClientApi::Request.new(scenario)
